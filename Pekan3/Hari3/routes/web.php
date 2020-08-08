@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/data-tables', function () {
     return view('datatables');
 });
+
+Route::get('/pertanyaan/create', 'Pertanyaan@create');
+Route::post('/pertanyaan', 'Pertanyaan@store');
+Route::get('/pertanyaan', 'Pertanyaan@index');
+Route::get('/pertanyaan/{id}', 'Pertanyaan@show');
+Route::get('/pertanyaan/{id}/edit', 'Pertanyaan@edit');
+Route::put('/pertanyaan/{id}', 'Pertanyaan@update');
+Route::delete('/pertanyaan/{id}', 'Pertanyaan@destroy');
